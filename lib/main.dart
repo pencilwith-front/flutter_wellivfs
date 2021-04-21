@@ -148,7 +148,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
 
   void _doSomething() async {
     if (_idController.text.length == 0) {
-      Get.snackbar('사번 오류', '사번이 입력되지 않았습니다.',
+      Get.snackbar('사번 공백', '사번이 입력되지 않았습니다.',
           snackPosition: SnackPosition.TOP);
       _idFocusNode.requestFocus();
       _btnController.error();
@@ -156,7 +156,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         _btnController.reset();
       });
     } else if (_pwdController.text.length == 0) {
-      Get.snackbar('비밀번호 오류', '비밀번호가 입력되지 않았습니다.',
+      Get.snackbar('비밀번호 공백', '비밀번호가 입력되지 않았습니다.',
           snackPosition: SnackPosition.TOP);
       _pwdFocusNode.requestFocus();
       _btnController.error();
