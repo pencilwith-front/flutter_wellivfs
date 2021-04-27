@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-
+// import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_wellivfs/models/getxmodel.dart';
@@ -12,11 +12,25 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'expackages/rlb.dart';
 
-void main() => runApp(GetMaterialApp(
-      home: MyApp(),
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blueGrey),
-    ));
+// BannerAd ba = BannerAd(
+//     adUnitId: BannerAd.testAdUnitId,
+//     size: AdSize.banner,
+//     listener: (MobileAdEvent event) {
+//       print('$event');
+//     });
+
+void main() {
+  runApp(GetMaterialApp(
+    // localizationsDelegates: [
+    //   GlobalMaterialLocalizations.delegate,
+    //   GlobalWidgetsLocalizations.delegate,
+    // ],
+    // supportedLocales: [Locale('ko')],
+    home: MyApp(),
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(primarySwatch: Colors.blueGrey),
+  ));
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -36,6 +50,13 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
+    // FirebaseAdMob.instance
+    //     .initialize(appId: 'ca-app-pub-4628159324998827~9794560312');
+    //
+    // ba
+    //   ..load()
+    //   ..show(anchorOffset: 0, anchorType: AnchorType.bottom);
+
     HttpOverrides.global = new MyHttpOverrides(); //android ssl handshake error
     super.initState();
     _loadLogin();
@@ -178,8 +199,8 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
           _idFocusNode.requestFocus();
         });
       } else if (result == 9) {
-        //if (_gc.employee.mainData.first.cOCODE == '0001') {
         if (_gc.employee.mainData.first.cOCODE == '0000') {
+          //if (_gc.employee.mainData.first.cOCODE == '0000') {
           _prefs.setString('WId', _idController.text);
           _prefs.setString('WPwd', _pwdController.text);
           _btnController.success();

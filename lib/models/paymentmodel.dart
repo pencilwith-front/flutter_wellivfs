@@ -1,8 +1,11 @@
 class PaymentModel {
   List<DLIST> dLIST;
   List<PLIST> pLIST;
+  int dSUM;
+  int pSUM;
+  int bANKSUM;
 
-  PaymentModel({this.dLIST, this.pLIST});
+  PaymentModel({this.dLIST, this.pLIST, this.dSUM, this.pSUM, this.bANKSUM});
 
   PaymentModel.fromJson(Map<String, dynamic> json) {
     if (json['DLIST'] != null) {
@@ -17,6 +20,9 @@ class PaymentModel {
         pLIST.add(new PLIST.fromJson(v));
       });
     }
+    dSUM = json['DSUM'];
+    pSUM = json['PSUM'];
+    bANKSUM = json['BANKSUM'];
   }
 
   Map<String, dynamic> toJson() {
@@ -27,6 +33,9 @@ class PaymentModel {
     if (this.pLIST != null) {
       data['PLIST'] = this.pLIST.map((v) => v.toJson()).toList();
     }
+    data['DSUM'] = this.dSUM;
+    data['PSUM'] = this.pSUM;
+    data['BANKSUM'] = this.bANKSUM;
     return data;
   }
 }

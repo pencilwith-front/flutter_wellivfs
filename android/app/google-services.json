@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1036619337503",
+    "project_id": "welliv-fs",
+    "storage_bucket": "welliv-fs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036619337503:android:295d980d4587c587bb6a2a",
+        "android_client_info": {
+          "package_name": "welliv.co.kr.flutter_wellivfs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036619337503-46jta0h7fj9umb47pub9765kjsi35h3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiMy7oVoMchiIWjinbYo5k7zIVaZgSbsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036619337503-46jta0h7fj9umb47pub9765kjsi35h3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

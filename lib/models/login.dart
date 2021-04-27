@@ -26,13 +26,13 @@ class LoginInfo {
 class MainData {
   String eMPNAMEKOR;
   String bSNSPLCCODE;
-  Null pSTNDESC;
+  String pSTNDESC;
   String eMPNO;
   String dEPTDESC;
   String hANDPHONNO;
   String cOCODE;
   String pSTNCODE;
-  Null iNTNMAILID;
+  String iNTNMAILID;
 
   MainData(
       {this.eMPNAMEKOR,

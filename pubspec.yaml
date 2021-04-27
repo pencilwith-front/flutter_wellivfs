@@ -32,6 +32,9 @@ dependencies:
   get: ^3.25.6
   http: ^0.12.2
   shared_preferences: ^0.5.12+4
+  intl: ^0.16.1
+  flutter_datetime_picker: ^1.5.0
+  #firebase_admob: ^0.10.3
 
 dev_dependencies:
   flutter_test:
@@ -49,8 +52,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/026565.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -78,3 +81,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: DoHyeonRegular
+      fonts:
+        - asset: lib/fonts/DoHyeon-Regular.ttf
